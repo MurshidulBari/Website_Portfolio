@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanjana Rahman Lamia ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf7; --surface:#ffffff; --pink:#f4a6c1; --pink-d:#d9608f; --baby:#fde3ec; --lav:#d9ccf5; --lav-d:#7a5fc0;
+  --ink:#4a3550; --muted:#8a7590; --line:#f3d9e4;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#2a2030;--surface:#382b40;--pink:#f08db0;--pink-d:#ffb3cf;--baby:#4a3350;--lav:#5b4a8a;--lav-d:#d9ccf5;--ink:#fbeff5;--muted:#c9b5d0;--line:#55415c}
+}
+:root[data-theme="dark"]{--bg:#2a2030;--surface:#382b40;--pink:#f08db0;--pink-d:#ffb3cf;--baby:#4a3350;--lav:#5b4a8a;--lav-d:#d9ccf5;--ink:#fbeff5;--muted:#c9b5d0;--line:#55415c}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Quicksand',system-ui,sans-serif;line-height:1.65;font-size:17px;
+  background-image:radial-gradient(var(--line) 1.4px,transparent 1.4px);background-size:26px 26px}
+h1,h2,h3,.logo{font-family:'Fredoka','Quicksand',system-ui,sans-serif;font-weight:500;line-height:1.2;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:2px dashed var(--line)}
+.bar{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 18px;flex-wrap:wrap}
+.logo{font-size:22px;color:var(--pink-d);text-decoration:none}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{padding:6px 14px;border-radius:99px;text-decoration:none;color:var(--ink);font-weight:600;font-size:15px;border:2px solid transparent}
+nav a:hover{background:var(--baby)}
+nav a.on{background:var(--pink);color:#fff;border-color:var(--pink)}
+nav a:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid var(--lav-d);outline-offset:2px}
+main{max-width:1000px;margin:auto;padding:30px 18px 70px}
+.page{display:none}.page.on{display:block;animation:in .5s ease}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;padding:20px 0}
+.hero h1{font-size:clamp(34px,6vw,58px);color:var(--ink)}
+.hero h1 span{color:var(--pink-d)}
+.hero p{max-width:46ch}
+.avatar{aspect-ratio:1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:linear-gradient(145deg,var(--baby),var(--lav));display:grid;place-items:center;border:4px solid var(--surface);box-shadow:8px 8px 0 var(--pink);font-size:clamp(70px,14vw,120px);position:relative;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.btn{display:inline-block;margin:6px 8px 0 0;padding:10px 20px;border-radius:99px;background:var(--pink);color:#fff;text-decoration:none;font-weight:600;border:0;cursor:pointer;font:600 16px 'Quicksand',sans-serif;box-shadow:0 4px 0 var(--pink-d)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--pink-d)}
+.btn.alt{background:var(--lav);color:var(--ink);box-shadow:0 4px 0 var(--lav-d)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:30px}
+.card{background:var(--surface);border:2px solid var(--line);border-radius:22px;padding:18px 20px}
+.card h3{font-size:19px;margin-bottom:6px;color:var(--pink-d)}
+.card p{margin:0;color:var(--muted);font-size:15.5px}
+.card .tag{display:inline-block;font-size:13px;padding:2px 10px;border-radius:99px;background:var(--baby);color:var(--ink);margin:8px 6px 0 0}
+.card .tag.l{background:var(--lav)}
+.pt{text-align:center;margin-bottom:24px}
+.pt h2{font-size:clamp(28px,5vw,40px)}
+.pt p{color:var(--muted);margin:6px auto 0;max-width:50ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+.grid .card{transition:transform .2s}.grid .card:hover{transform:rotate(-1deg) translateY(-3px)}
+h3.sec{margin:34px 0 14px;font-size:24px;color:var(--lav-d)}
+.tl{border-left:3px dashed var(--pink);margin-left:8px;padding-left:22px}
+.tl .card{margin-bottom:14px;position:relative}
+.tl .card::before{content:"♡";position:absolute;left:-36px;top:14px;background:var(--bg);color:var(--pink-d);font-size:18px;line-height:1}
+.gal{columns:3 220px;column-gap:16px}
+.art{break-inside:avoid;margin:0 0 16px;border-radius:20px;overflow:hidden;border:2px solid var(--line);background:var(--surface)}
+.art .ph{display:grid;place-items:center;font-size:44px;background:linear-gradient(135deg,var(--baby),var(--lav))}
+.art figcaption{padding:10px 14px;font-size:15px;color:var(--muted)}
+.note{background:var(--baby);border-radius:16px;padding:12px 16px;font-size:14.5px;margin-top:22px;color:var(--ink)}
+footer{text-align:center;color:var(--muted);padding:26px 18px calc(30px + env(safe-area-inset-bottom,0px));border-top:2px dashed var(--line);font-size:15px}
+.theme{background:var(--baby);border:0;border-radius:99px;width:38px;height:38px;cursor:pointer;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{padding:5px 14px;border-radius:99px;background:var(--baby);font-weight:600;font-size:15px;border:2px solid var(--line)}
+.chip.l{background:var(--lav)}
+.lvl{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:2px dashed var(--line);font-size:15.5px}
+.lvl:last-child{border:0}.lvl span:last-child{color:var(--muted)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.link{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.link:hover{border-color:var(--pink)}
+.link b{display:block;font-family:'Fredoka',sans-serif;font-weight:500;font-size:18px;color:var(--pink-d)}
+.link small{color:var(--muted);font-size:14.5px}
+.link .ic{font-size:28px}
+/* cursor */
+.kitty{position:fixed;left:0;top:0;width:34px;height:34px;pointer-events:none;z-index:999;transform:translate(-100px,-100px);will-change:transform}
+.kitty svg{width:100%;height:100%;display:block;margin:-4px 0 0 -4px}
+@media (hover:hover) and (pointer:fine){html.kc,html.kc *{cursor:none!important}}
+@media (hover:none){.kitty{display:none}}
+.spark{position:fixed;pointer-events:none;z-index:998;font-size:14px;animation:sp .8s ease-out forwards}
+@keyframes sp{to{transform:translate(var(--dx),var(--dy)) scale(.4);opacity:0}}
+@media (max-width:720px){.hero{grid-template-columns:1fr}.avatar{max-width:240px;margin:auto;order:-1}.bar{justify-content:center}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.spark{display:none}}
+</style>
+</head>
+<body>
+<div class="kitty" id="kitty" aria-hidden="true">
+<svg viewBox="0 0 40 40"><path d="M6 6l9 5h10l9-5 2 15c0 9-8 14-16 14S4 30 4 21z" fill="#fff" stroke="#4a3550" stroke-width="2" stroke-linejoin="round"/><ellipse cx="14" cy="22" rx="1.8" ry="2.4" fill="#4a3550"/><ellipse cx="26" cy="22" rx="1.8" ry="2.4" fill="#4a3550"/><ellipse cx="20" cy="26" rx="2.4" ry="1.6" fill="#f4c542"/><path d="M5 22l-5-1M5 26l-5 2M35 22l5-1M35 26l5 2" stroke="#4a3550" stroke-width="1.5" stroke-linecap="round"/><path d="M27 6c3-4 9-3 9 1s-5 5-9 4c-4 1-9 0-9-4s6-5 9-1z" fill="#f4a6c1" stroke="#4a3550" stroke-width="1.5" transform="translate(-3 -2) scale(.8)"/></svg>
+</div>
+
+<header><div class="bar">
+  <a class="logo" href="#home">Lamia ♡</a>
+  <nav aria-label="Main">
+    <a href="#home">Home</a><a href="#about">About</a><a href="#academic">Projects</a><a href="#clubs">Clubs &amp; Awards</a><a href="#art">Artwork</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="theme" id="theme" aria-label="Toggle dark mode">🌙</button>
+</div></header>
+
+<main>
+<!-- HOME -->
+<section class="page" id="home">
+  <div class="hero">
+    <div>
+      <p style="margin:0 0 6px;color:var(--lav-d);font-weight:600">hello, I’m</p>
+      <h1>Sanjana Rahman <span>Lamia</span></h1>
+      <p>A CSE student who writes code in the day and draws little worlds at night. Born and raised in Rajshahi, now building things at AIUB. ✿</p>
+      <a class="btn" href="#academic">See my projects</a><a class="btn alt" href="#art">Peek at my art</a>
+    </div>
+    <div class="avatar" role="img" aria-label="Portrait placeholder"><span>🌸</span><!-- Replace with: <img src="data:..." alt="Sanjana"> --></div>
+  </div>
+  <div class="facts">
+    <div class="card"><h3>🎓 Studying</h3><p>BSc Engineering in Computer Science &amp; Engineering at American International University-Bangladesh (AIUB).</p></div>
+    <div class="card"><h3>🏫 Schooling</h3><p>SSC and HSC from Rajshahi University School, Rajshahi.</p></div>
+    <div class="card"><h3>🎨 Outside of code</h3><p>Sketches, colours and cozy illustrations, shared on Instagram.</p></div>
+    <div class="card"><h3>📚 Research</h3><p>Ongoing projects and a paper in progress. More coming soon!</p></div>
+  </div>
+</section>
+
+<!-- ACADEMIC -->
+<section class="page" id="academic">
+  <div class="pt"><h2>Projects &amp; Demos</h2><p>Things I’ve built, tested and sometimes broken (then fixed).</p></div>
+  <h3 class="sec">Published on GitHub</h3>
+  <div class="grid">
+    <div class="card"><h3>Babysitter</h3><p>A C# desktop application with sign-up, profile and listing screens for parents and babysitters.</p><span class="tag">C#</span><span class="tag l">Desktop App</span><br><a class="btn" href="https://github.com/Lamia10/Babysitter" target="_blank" rel="noopener">GitHub</a></div>
+    <div class="card"><h3>summer-wbt-2025</h3><p>A PHP web project from Summer 2025.</p><span class="tag">PHP</span><span class="tag l">Web</span><br><a class="btn" href="https://github.com/Lamia10/summer-wbt-2025" target="_blank" rel="noopener">GitHub</a></div>
+    
+  </div>
+  <h3 class="sec">Ongoing</h3>
+  <div class="grid">
+    <div class="card"><h3>Ongoing project</h3><p>What she is working on right now. Status: in progress 🌱</p><span class="tag">In progress</span></div>
+  </div>
+  <h3 class="sec">Papers</h3>
+  <div class="grid">
+    <div class="card"><h3>Paper title (in progress)</h3><p>Topic, co-authors and target venue or status.</p><span class="tag l">Research</span></div>
+  </div>
+  <div class="note">💡 Replace the placeholder cards with her real project names, descriptions and GitHub links.</div>
+</section>
+
+<!-- CLUBS -->
+<section class="page" id="clubs">
+  <div class="pt"><h2>Clubs &amp; Achievements</h2><p>Teams, roles and little victories along the way.</p></div>
+  <h3 class="sec">Club work</h3>
+  <div class="tl">
+    <div class="card"><h3>Club name · Role</h3><p>Year – Present. What she organises, leads or contributes to.</p></div>
+    <div class="card"><h3>Another club · Member</h3><p>Events, workshops or competitions she helped with.</p></div>
+  </div>
+  <h3 class="sec">Achievements</h3>
+  <div class="grid">
+    <div class="card"><h3>🏆 Award or contest</h3><p>Name, year and a short note on what it was for.</p></div>
+    <div class="card"><h3>🎖️ Scholarship / certificate</h3><p>Add the details here.</p></div>
+    <div class="card"><h3>⭐ Highlight</h3><p>Anything she’s proud of, big or small.</p></div>
+  </div>
+</section>
+
+<!-- ART -->
+<section class="page" id="art">
+  <div class="pt"><h2>Artwork</h2><p>Soft colours, small stories. Find more on her Instagram.</p>
+    <a class="btn" href="https://www.instagram.com/pilumisul/" target="_blank" rel="noopener" id="ig">Visit Instagram 💗</a></div>
+  <div class="gal">
+    <figure class="art"><div class="ph" style="height:200px">🌷</div><figcaption>Artwork title one</figcaption></figure>
+    <figure class="art"><div class="ph" style="height:280px;background:linear-gradient(135deg,var(--lav),var(--baby))">🐰</div><figcaption>Artwork title two</figcaption></figure>
+    <figure class="art"><div class="ph" style="height:230px">☁️</div><figcaption>Artwork title three</figcaption></figure>
+    <figure class="art"><div class="ph" style="height:170px;background:linear-gradient(135deg,var(--pink),var(--lav))">🍓</div><figcaption>Artwork title four</figcaption></figure>
+    <figure class="art"><div class="ph" style="height:260px">🌙</div><figcaption>Artwork title five</figcaption></figure>
+    <figure class="art"><div class="ph" style="height:200px;background:linear-gradient(135deg,var(--lav),var(--pink))">🎀</div><figcaption>Artwork title six</figcaption></figure>
+  </div>
+  <div class="note">🖼️ To show her real art, replace each emoji block with &lt;img src="..." alt="..."&gt;. Because this page is self-contained, embed images as data URIs.</div>
+</section>
+<!-- ABOUT -->
+<section class="page" id="about">
+  <div class="pt"><h2>About Me</h2><p>A little about the person behind the code and the colours.</p></div>
+  <div class="card" style="margin-bottom:18px"><h3>Hi, I’m Lamia ✿</h3>
+    <p style="font-size:16.5px">I’m a BSc Engineering student in Computer Science &amp; Engineering at AIUB. I grew up in Rajshahi and finished my SSC and HSC at Rajshahi University School. I enjoy turning ideas into working software, and I like making sure that software actually works well. When I’m not coding, you’ll find me drawing or listening to songs.</p></div>
+  <div class="two">
+    <div class="card"><h3>🔬 Research interests</h3><p>What I like to explore and write about.</p>
+      <div class="chips"><span class="chip l">Artificial Intelligence</span><span class="chip l">Machine Learning</span><span class="chip l">Software Quality Testing</span></div></div>
+    <div class="card"><h3>💻 Skills</h3><p>Tools and languages I work with.</p>
+      <div class="chips"><span class="chip">Database Management</span><span class="chip">SQL</span><span class="chip">C#</span><span class="chip">Java</span><span class="chip">and more</span></div></div>
+    <div class="card"><h3>🎨 Hobbies</h3><p>What keeps me happy away from the screen.</p>
+      <div class="chips"><span class="chip">Drawing</span><span class="chip">Listening to songs</span></div></div>
+    <div class="card"><h3>🗣️ Languages</h3>
+      <div class="lvl"><span>Bangla</span><span>Native</span></div>
+      <div class="lvl"><span>English</span><span>Fluent</span></div>
+      <div class="lvl"><span>German</span><span>Learning, close to A2</span></div></div>
+  </div>
+  <div class="note">✏️ Adjust the English level wording or add more skills (for example Python or web tools) whenever you like.</div>
+</section>
+
+<!-- CONTACT -->
+<section class="page" id="contact">
+  <div class="pt"><h2>Contact &amp; Links</h2><p>For collaborations, research ideas or just to say hello.</p></div>
+  <div class="grid">
+    <a class="card link" href="mailto:Sanjana.lamia120@gmail.com"><span class="ic">💌</span><span><b>Email</b><small>Sanjana.lamia120@gmail.com</small></span></a>
+    <a class="card link" href="https://github.com/Lamia10" target="_blank" rel="noopener"><span class="ic">🐱</span><span><b>GitHub</b><small>Code and projects</small></span></a>
+    <a class="card link" href="https://www.instagram.com/pilumisul/" target="_blank" rel="noopener"><span class="ic">🎨</span><span><b>Instagram</b><small>Artwork and sketches</small></span></a>
+    <a class="card link" href="https://www.linkedin.com/in/sanjana-rahman-36547521b/" target="_blank" rel="noopener"><span class="ic">💼</span><span><b>LinkedIn</b><small>Professional profile</small></span></a>
+    <a class="card link" href="https://scholar.google.com/" target="_blank" rel="noopener"><span class="ic">📚</span><span><b>Google Scholar</b><small>Papers and research</small></span></a>
+  </div>
+  <div class="card" style="margin-top:22px;text-align:center"><h3>Based in Bangladesh</h3><p>Studying at American International University-Bangladesh (AIUB).</p></div>
+  <div class="note">🔗 The Google Scholar link is still a placeholder. Send her profile link or I can remove it.</div>
+</section>
+</main>
+
+<footer>© 2026 Sanjana Rahman Lamia. BSc in Computer Science &amp; Engineering, American International University-Bangladesh.</footer>
+
+<script>
+(function(){
+  var pages=['home','about','academic','clubs','art','contact'];
+  function route(){
+    var h=(location.hash||'#home').slice(1); if(pages.indexOf(h)<0)h='home';
+    pages.forEach(function(p){document.getElementById(p).classList.toggle('on',p===h)});
+    document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+h)});
+    window.scrollTo(0,0);
+  }
+  window.addEventListener('hashchange',route);route();
+
+  // theme
+  var root=document.documentElement,tb=document.getElementById('theme');
+  function setT(t){root.setAttribute('data-theme',t);tb.textContent=t==='dark'?'☀️':'🌙';try{localStorage.setItem('theme',t)}catch(e){}}
+  var saved=null;try{saved=localStorage.getItem('theme')}catch(e){}
+  if(saved)setT(saved);else if(window.matchMedia('(prefers-color-scheme: dark)').matches)setT('dark');
+  tb.onclick=function(){setT(root.getAttribute('data-theme')==='dark'?'light':'dark')};
+
+  // kitty cursor
+  var k=document.getElementById('kitty'),fine=window.matchMedia('(hover:hover) and (pointer:fine)').matches,
+      reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches,last=0;
+  if(fine){
+    root.classList.add('kc');
+    document.addEventListener('mousemove',function(e){
+      k.style.transform='translate('+e.clientX+'px,'+e.clientY+'px)';
+      var n=Date.now();if(reduce||n-last<90)return;last=n;spark(e.clientX,e.clientY);
+    });
+    document.addEventListener('mousedown',function(e){if(!reduce)for(var i=0;i<6;i++)spark(e.clientX,e.clientY)});
+  }
+  function spark(x,y){
+    var s=document.createElement('span');s.className='spark';s.textContent=['♡','✿','✦'][Math.floor(Math.random()*3)];
+    s.style.left=x+'px';s.style.top=y+'px';s.style.color=Math.random()<.5?'#f4a6c1':'#b9a3e8';
+    s.style.setProperty('--dx',(Math.random()*40-20)+'px');s.style.setProperty('--dy',(Math.random()*40+10)+'px');
+    document.body.appendChild(s);setTimeout(function(){s.remove()},800);
+  }
+})();
+</script>
+</body>
+</html>
